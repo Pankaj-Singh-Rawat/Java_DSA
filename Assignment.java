@@ -1,5 +1,6 @@
 package Java_DSA;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Assignment {
@@ -9,12 +10,14 @@ public class Assignment {
 //        table();
 
 //        Take 2 numbers as inputs and find their HCF and LCM.
-//        LCMandHCF();
+        lcm();
 
-        input();
+//        input();
+
     }
 
-    static void LCMandHCF() {
+    static void lcm() {
+
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter 1st number: ");
@@ -23,7 +26,67 @@ public class Assignment {
         System.out.print("Enter 2nd number: ");
         int n2= in.nextInt();
 
-        
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        for (int i = 1; i <= n1; i++) {
+            if( n1 % i == 0 ){
+                numbers.add(i);
+            }
+        }
+
+        ArrayList<Integer> numbersB = new ArrayList<>();
+
+        for (int j = 1; j <= n2; j++) {
+            if( n2 % j == 0 ){
+                numbersB.add(j);
+            }
+        }
+
+        ArrayList<Integer> numbern1 = new ArrayList<>();
+        while(true){
+
+            int lcm = 1;
+
+            for (int index = 0; index < numbers.size() ; index++) {
+
+                int temp = numbers.get(index);
+
+                if(lcm == n1){
+                    break;
+                }else {
+                    numbern1.add(temp);
+                    lcm *= temp;
+                }
+
+            }
+            break;
+        }
+
+        ArrayList<Integer> numbern2 = new ArrayList<>();
+        while(true){
+
+            int lcm = 1;
+
+            for (int index = 0; index < numbersB.size() ; index++) {
+
+                int temp = numbersB.get(index);
+
+                if(lcm == n2){
+                    break;
+                }else {
+                    numbern2.add(temp);
+                    lcm *= temp;
+                }
+
+            }
+            System.out.println(numbern2);
+            break;
+        }
+
+//        numbern1.addAll(numbern2);
+//
+//        System.out.println(numbern1);
+
     }
 
     static void table(){
