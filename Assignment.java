@@ -10,10 +10,54 @@ public class Assignment {
 //        table();
 
 //        Take 2 numbers as inputs and find their HCF and LCM.
-        lcm();
+//        lcm();
 
 //        input();
+        
+//        To find out whether the given String is Palindrome or not.
+//        stringPalindrome();
 
+//        To find Armstrong Number between two given number.
+        armstrong();
+
+    }
+
+    static void armstrong() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Starting Range: ");
+        int n1 = in.nextInt();
+        System.out.println("Ending Range: ");
+        int n2 = in.nextInt();
+
+        for (int i = n1; i < n2 ; i++) {
+            int temp = 0;
+            int n = i ;
+            while( n > 0){
+                temp += (n % 10) * ( n % 10) * ( n % 10) ;
+                 n =  n / 10 ;
+            }
+            if (i == temp){
+                System.out.println(temp + " is a Armstrong number");
+            }
+        }
+    }
+
+    static void stringPalindrome() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter a name to check if pallindrome: ");
+        String name = in.nextLine();
+
+        String reverse = "";
+        for (int i = name.length() - 1 ; i >= 0 ; i--) {
+            reverse += name.charAt(i);
+        }
+        if(reverse.equals(name)){
+            System.out.println(name + " is palindrome");;
+        }else{
+            System.out.println(name + " is not palindrome");
+        }
     }
 
     static void lcm() {
