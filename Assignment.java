@@ -21,12 +21,59 @@ public class Assignment {
 //        armstrong();
 
 //        Perfect Number In Java
-        perfectNum();
+//        perfectNum();
 
+//        Sum Of A Digits Of Number
+//        sumOfDig();
+
+//        Write a program to print the sum of negative numbers, sum of positive even numbers and the sum of positive odd numbers from a list of numbers (N) entered by the user. The list terminates when the user enters a zero.
+        longProgram();
+    }
+
+    static void longProgram() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the range from -ve to +ve : ");
+        int n1 = in.nextInt();
+        int n2 = in.nextInt();
+        int negSum = 0 ;
+        while(n1 < 0 ){
+            negSum += n1;
+            n1++;
+        }
+        System.out.println("Sum of negative numbers = " + negSum);
+
+        int posEvSum = 0;
+        int posOdSum = 0;
+
+        for (int i = n1; i < n2; i++) {
+
+            if( i > 0 && i%2 == 0){
+                posEvSum += i;
+            }else if( i > 0 && i%2 == 1){
+                posOdSum += i;
+            }
+        }
+        System.out.println("Sum of positive even numbers = " + posEvSum);
+        System.out.println("Sum of positive odd numbers = " + posOdSum);
+
+    }
+
+    static void sumOfDig() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = in.nextInt();
+        int sum = 0;
+        while ( n > 0){
+            int temp = n % 10 ;
+            sum += temp;
+            n = n / 10;
+        }
+        System.out.println(sum);
     }
 
     static void perfectNum() {
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number: ");
         int n = in.nextInt();
         int sum = 0 ;
         for (int i = 1; i < n; i++) {
