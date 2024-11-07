@@ -18,8 +18,27 @@ public class Assignment {
 //        stringPalindrome();
 
 //        To find Armstrong Number between two given number.
-        armstrong();
+//        armstrong();
 
+//        Perfect Number In Java
+        perfectNum();
+
+    }
+
+    static void perfectNum() {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int sum = 0 ;
+        for (int i = 1; i < n; i++) {
+            if(n % i == 0){
+               sum = sum + i;
+            }
+        }
+        if(n == sum){
+            System.out.println("Perfect Number.");
+        }else{
+            System.out.println("Not a Perfect Number");
+        }
     }
 
     static void armstrong() {
