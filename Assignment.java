@@ -3,6 +3,8 @@ package Java_DSA;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class Assignment {
     public static void main(String[] args) {
 
@@ -27,7 +29,27 @@ public class Assignment {
 //        sumOfDig();
 
 //        Write a program to print the sum of negative numbers, sum of positive even numbers and the sum of positive odd numbers from a list of numbers (N) entered by the user. The list terminates when the user enters a zero.
-        longProgram();
+//        longProgram();
+
+//        Define a method to find out if a number is prime or not.
+        primeNo();
+    }
+
+    static void primeNo() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+
+        int n = in.nextInt();
+
+
+        for (int i = 2; i < n ; i++) {
+
+            if( n % i == 0){
+                System.out.println(n + " is not a prime number");
+                return;
+            }
+        }
+        System.out.println(n + " is a prime number");
     }
 
     static void longProgram() {
