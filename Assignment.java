@@ -52,10 +52,27 @@ public class Assignment {
 
 //        Given an integer array nums of length n, you want to create an array ans of length 2n
 //        (Concatenation of Array)
-        concatenation();
+//        concatenation();
+
+//        Running Sum of 1d Array
+        runningSum();
 
 
             }
+
+    static void runningSum() {
+        int[] num = {1,2,3,4};
+
+         ArrayList<Integer> ans = new ArrayList<>();
+         int temp = 0 ;
+        for (int i = 0; i < num.length; i++) {
+
+            temp += num[i];
+            ans.add(temp);
+        }
+
+        System.out.println(ans);
+    }
 
     static void concatenation() {
 
