@@ -45,9 +45,51 @@ public class Assignment {
 //        51-60          CD
 //        41-50          DD
 //                <=40          Fail
-        marks();
+//        marks();
+
+//        Build Array from Permutation
+//        buildArray();
+
+//        Given an integer array nums of length n, you want to create an array ans of length 2n
+//        (Concatenation of Array)
+        concatenation();
+
+
+            }
+
+    static void concatenation() {
+
+        int[] in = {1,3,2,1};
+        ArrayList<Integer> ans = new ArrayList<>();
+        int count = 2;
+        while(count > 0){
+            for (int i = 0; i < in.length; i++) {
+                ans.add(in[i]);
+            }
+            count -- ;
+        }
+
+        System.out.println(ans);
 
     }
+
+    static void buildArray() {
+
+//        Input: nums = [0,2,1,5,3,4]
+//        int[] nums = {0,2,1,5,3,4};
+        int[] nums = {5,0,1,2,3,4};
+
+        ArrayList<Integer> ans = new ArrayList<>();
+
+        for (int i = 0; i < nums.length ; i++) {
+
+            int temp =  nums[nums[i]];
+            ans.add(temp);
+        }
+        System.out.println(ans);
+
+    }
+
 
     static void marks() {
         Scanner in = new Scanner(System.in);
