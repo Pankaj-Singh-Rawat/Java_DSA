@@ -55,10 +55,29 @@ public class Assignment {
 //        concatenation();
 
 //        Running Sum of 1d Array
-        runningSum();
+//        runningSum();
+
+//        Subtract the Product and Sum of Digits of an Integer
+        subtractProductAndSum();
 
 
             }
+
+    static void subtractProductAndSum() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = in.nextInt();
+
+        int product = 1;
+        int sum = 0 ;
+        while(n>0){
+            int temp = n % 10 ;
+            product *= temp;
+            sum += temp;
+            n = n / 10;
+        }
+        System.out.println( "ans is : " + (product - sum) );
+    }
 
     static void runningSum() {
         int[] num = {1,2,3,4};
