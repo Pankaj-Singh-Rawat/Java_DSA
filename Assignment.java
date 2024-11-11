@@ -61,9 +61,15 @@ public class Assignment {
         // subtractProductAndSum();
 
         // addition of two numbers using a method
-
+        addTwoNum(45 , 55);
+        System.out.println(addTwoNum(45 , 55));
 
             }
+
+
+    static int addTwoNum(int a , int b){
+        return a + b ; 
+    }
 
     static void subtractProductAndSum() {
         Scanner in = new Scanner(System.in);
