@@ -58,7 +58,9 @@ public class Assignment {
 //        runningSum();
 
 //        Subtract the Product and Sum of Digits of an Integer
-        subtractProductAndSum();
+        // subtractProductAndSum();
+
+        // addition of two numbers using a method
 
 
             }
