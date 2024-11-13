@@ -32,7 +32,32 @@ public class App {
         // How Many Numbers Are Smaller Than the Current Number
         // Input: nums = [8,1,2,2,3]
         // Output: [4,0,1,1,3]
-        smallerThanCurrentnum();
+        // smallerThanCurrentnum();
+
+        // Check if the Sentence Is Pangram
+        // Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
+        // Output: true
+        System.out.println(pangram());
+    }
+    
+    
+    static boolean pangram(){
+        
+        String sentence = "thequickbrownfoxjumpsoverthelazydog";
+        // String sentence = "leetcode";
+        boolean[] alphabet = new boolean[26];
+        for (char ch : sentence.toCharArray()) {
+            alphabet[ch - 'a'] = true;
+            // System.out.println(ch);
+        }
+        
+        for (boolean letterPresent : alphabet){
+            if(!letterPresent){
+                return false;
+            }
+        }
+        
+        return true; 
     }
     
     static void smallerThanCurrentnum(){
