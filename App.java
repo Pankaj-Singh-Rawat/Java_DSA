@@ -21,10 +21,32 @@ public class App {
         // Kids With the Greatest Number of Candies
         // Input: candies = [2,3,5,1,3], extraCandies = 3
         // Output: [true,true,true,false,true]
-        ArrayList<Boolean> result = candies();
-        System.out.println("Result: " + result);
-    }
+        // ArrayList<Boolean> result = candies();
+        // System.out.println("Result: " + result);
 
+        // Number of Good Pairs
+        // Input: nums = [1,2,3,1,1,3]
+        // Output: 4
+        System.out.println(goodPairs());
+
+
+
+
+    }
+    
+    static int goodPairs(){
+        
+        int[] nums = {1,2,3,1,1,3};
+        int count = 0;
+        for( int i = 0 ; i < nums.length ; i++){
+            for( int j = i + 1 ; j < nums.length ; j++){
+                if ( nums[i] == nums[j] ){
+                    count += 1;
+                }
+            }
+        }
+        return count;
+    }
     static ArrayList<Boolean> candies() {
 
         int[] candie = { 2, 3, 5, 1, 3 };
