@@ -27,11 +27,31 @@ public class App {
         // Number of Good Pairs
         // Input: nums = [1,2,3,1,1,3]
         // Output: 4
-        System.out.println(goodPairs());
+        // System.out.println(goodPairs());
 
-
-
-
+        // How Many Numbers Are Smaller Than the Current Number
+        // Input: nums = [8,1,2,2,3]
+        // Output: [4,0,1,1,3]
+        smallerThanCurrentnum();
+    }
+    
+    static void smallerThanCurrentnum(){
+        
+        int[] nums = {8,1,2,2,3};
+        
+        ArrayList<Integer> arr = new ArrayList<>();
+        
+        for(int i = 0 ; i < nums.length ; i ++ ){
+            int count = 0 ;
+            for(int j = 0 ; j < nums.length ;j ++ ){
+                if(nums[i] > nums[j]){
+                    count+= 1;
+                }
+            }
+            arr.add(count);
+        }
+        System.out.println(arr);
+        
     }
     
     static int goodPairs(){
