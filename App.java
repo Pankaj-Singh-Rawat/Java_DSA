@@ -53,12 +53,10 @@ public class App {
 
         ArrayList<Integer> arr1 = new ArrayList<> ();     
           for (int i = 0; i < index.length; i++) {
-            for (int j = index[i]; j < nums.length; j++) {
-                arr1.add(j);
-                break;
-            }
+            arr1.add(index[i] , nums[i]);
+            System.out.println(arr1);
         }
-        System.out.println(arr1);
+        // System.out.println(arr1);
     }
     
     
