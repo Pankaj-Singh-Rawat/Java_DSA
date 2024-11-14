@@ -37,7 +37,28 @@ public class App {
         // Check if the Sentence Is Pangram
         // Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
         // Output: true
-        System.out.println(pangram());
+        // System.out.println(pangram());
+
+        // Create Target Array in the Given Order
+        // Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
+        // Output: [0,4,1,3,2]
+        targetArray();
+
+    }
+
+
+    static void targetArray(){
+        int[] nums = { 0,1,2,3,4 };
+        int[] index = {0,1,2,2,1};
+
+        ArrayList<Integer> arr1 = new ArrayList<> ();     
+          for (int i = 0; i < index.length; i++) {
+            for (int j = index[i]; j < nums.length; j++) {
+                arr1.add(j);
+                break;
+            }
+        }
+        System.out.println(arr1);
     }
     
     
