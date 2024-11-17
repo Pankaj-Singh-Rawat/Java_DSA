@@ -42,9 +42,35 @@ public class App {
         // Create Target Array in the Given Order
         // Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
         // Output: [0,4,1,3,2]
-        targetArray();
+        // targetArray();
+
+        // Find the Highest Altitude
+        // Input: gain = [-5,1,5,0,-7]
+        largestAltitude();
 
     }
+
+    static void largestAltitude(){
+        int[] gain = {-5,1,5,0,-7};
+        int sum = 0 ;
+
+        int max = 0 ;
+
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        for (int i = 0; i < gain.length; i++) {
+            sum += gain[i] ;
+            arr1.add(sum);
+        }
+
+        Object[] arr = arr1.toArray();
+        for (int j = 0; j < arr.length; j++) {
+             if ( (Integer) arr[j] > max){
+                max = (Integer) arr[j];
+             }  
+        }
+        System.out.println(max);
+    }
+
 
 
     static void targetArray(){
