@@ -1,4 +1,4 @@
-package Java_DSA;
+package TrashCode;
 
 public class SearchInRange {
     public static void main(String[] args) {

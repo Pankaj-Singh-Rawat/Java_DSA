@@ -1,4 +1,4 @@
-package Java_DSA;
+package TrashCode;
 
 import java.util.Scanner;
 

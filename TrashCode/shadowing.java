@@ -1,4 +1,4 @@
-package Java_DSA;
+package TrashCode;
 
 public class shadowing {
     static int x = 90;  //this x will be shadowed at line 9 with another value of x
